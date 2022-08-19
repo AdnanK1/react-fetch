@@ -1,15 +1,17 @@
-import { useFetch } from "./useFetch"
+import { BrowserRouter, Routes, Rout } from "react-router-dom";
+import { Frontpage } from "./pages/Frontpage";
+import { Repos } from "./pages/Repos";
 
 export default function App() {
-  const {data:profiles,error} = useFetch('https://api.github.com/users/Charity-Mutembei')
-  return(
-    <div>
-      {error && <h2> {error} </h2>}
-      {profiles && <p> {profiles.bio} {profiles.followers} <a href={profiles.followers_url}>{profiles.followers_url}</a></p> }
-    </div>
-  )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Frontpage />} />
+        <Route path="Repos" element={<Repos />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
 
 // class RootObject:
 //  avatar_url: str
@@ -44,6 +46,3 @@ export default function App() {
 //  type: str
 //  updated_at: datetime
 //  url: str
-
- 
-
