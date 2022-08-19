@@ -18,6 +18,7 @@ export const Frontpage = () => {
         <div>
           {" "}
           <img src={profiles?.avatar_url} />{" "}
+          <p>{profiles?.public_repos}</p>
         </div>
       )}
     </div>

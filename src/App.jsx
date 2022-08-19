@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Rout } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Frontpage } from "./pages/Frontpage";
 import { Repos } from "./pages/Repos";
 
